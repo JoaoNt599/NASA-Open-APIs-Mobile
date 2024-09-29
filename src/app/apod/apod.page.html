@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button expand="full" routerLink="/home" color="secondary">
+      <ion-title>
+        <ion-icon name="chevron-back"></ion-icon>
+        Astronomy Picture of the Day
+      </ion-title>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="apodData">
+  <ion-card>
+    <img [src]="apodData.url" *ngIf="apodData.url" />
+    <ion-card-header>
+      <ion-card-title>{{ apodData.title }}</ion-card-title>
+      <p>{{ apodData.date }}</p>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ apodData.explanation }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
