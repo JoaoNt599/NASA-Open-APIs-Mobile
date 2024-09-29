@@ -20,29 +20,111 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-button expand="full" routerLink="/apod" color="secondary"> 
-    View Atronomy Picture of the Day (APOD)
-  </ion-button>
+
+  <ion-item>
+    <ion-button name="reorder-three-outline" routerLink="/apod" color="secondary"> 
+      APOD: View Atronomy Picture of the Day 
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      <b>Info</b>
+      <ion-icon name="reorder-three-outline"></ion-icon>
+    </ion-button>
+
+    <ion-modal #modal trigger="open-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>APOD: Astronomy Picture of the Day</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="modal.dismiss()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-item>
+          APOD: Astronomy Picture of the Day
+        </ion-item>
+        <ion-content>
+          <ion-item>
+            <p>
+              One of the most popular websites at NASA is the Astronomy Picture of the Day. 
+              In fact, this website is one of the most popular websites across all federal agencies. 
+              It has the popular appeal of a Justin Bieber video. 
+              This endpoint structures the APOD imagery and associated metadata so that it can be repurposed for other applications. 
+              In addition, if the concept_tags parameter is set to True, then keywords derived from the image explanation are returned. 
+              These keywords could be used as auto-generated hashtags for twitter or instagram feeds; but generally help with discoverability of relevant imagery.
+              The full documentation for this API can be found in the APOD API Github repository.
+            </p>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+  </ion-item>
+  
 
   <ion-button expand="full" routerLink="/asteroids" color="secondary">
-    See Near-Earth Asteroids
+    NeoWs: See Near-Earth Asteroids
   </ion-button>
 
   <ion-button expand="full" routerLink="/home" color="secondary">
-    Space Weather Database Of Notifications, Knowledge, Information (DONKI)
+    DONKI: Space Weather Database Of Notifications, Knowledge, Information
   </ion-button>
 
   <ion-button expand="full" routerLink="/home" color="secondary">
-    Unlock the significant public investment in earth observation data (Earth)
+    Earth: Unlock the significant public investment in earth observation data
   </ion-button>
 
   <ion-button expand="full" routerLink="/home" color="secondary">
-    The Earth Observatory Natural Event Tracker (EONET)
+    EONET: The Earth Observatory Natural Event Tracker 
   </ion-button>
 
   <ion-button expand="full" routerLink="/home" color="secondary">
-    Earth Polychromatic Imaging Camera (EPIC)
+    EPIC: Earth Polychromatic Imaging Camera 
   </ion-button>
 
+  <ion-button expand="full" routerLink="/home" color="secondary">
+    Programmatic access to NASA's Exoplanet Archive databse (Exoplanet)
+  </ion-button>
 
+  <ion-button expand="full" routerLink="/home" color="secondary">
+    Open Science Data Repository
+  </ion-button>
+
+  <ion-button expand="full" routerLink="/home" color="secondary">
+    Insight: Mars Weather Service API
+  </ion-button>
+
+  <ion-button expand="full" routerLink="/home" color="secondary">
+    Mars Rover Photos
+  </ion-button>
+
+  <ion-button expand="full" routerLink="/home" color="secondary">
+    NASA Image and Video Library
+  </ion-button>
+
+  <ion-button expand="full" routerLink="/home" color="secondary">
+    Tech Transfer: Patents, Software and Tech Transfer Reports
+  </ion-button>
+
+  <ion-button expand="full" routerLink="/home" color="secondary">
+   Satellite Situation Center
+  </ion-button>
+
+  <ion-button expand="full" routerLink="/home" color="secondary">
+    SSD/CNEOS: Solar System Dynamics and Center for Near-Earth Object Studies
+  </ion-button>
+
+  <ion-button expand="full" routerLink="/home" color="secondary">
+    Techport: API tp make NASA technology project data available in a machine-readble format
+  </ion-button>
+
+  <ion-button expand="full" routerLink="/home" color="secondary">
+    TLE API: Two line element data for earth-orbiting objects ar a given point in time
+  </ion-button>
+
+  <ion-button expand="full" routerLink="/home" color="secondary">
+    Vesta/Moon/Mars Trek WMTS
+  </ion-button>
 </ion-content>
+

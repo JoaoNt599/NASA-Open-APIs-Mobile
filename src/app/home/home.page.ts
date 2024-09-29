@@ -5,8 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
 export class HomePage {
+  presentingElement: Element | null = null;
 
   constructor() {}
 
+  ngOnInit() {
+    this.presentingElement = document.querySelector('.ion-page');
+  }
 }
