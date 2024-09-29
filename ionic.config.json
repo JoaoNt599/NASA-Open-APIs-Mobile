@@ -1,0 +1,7 @@
+{
+  "name": "nasaApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
