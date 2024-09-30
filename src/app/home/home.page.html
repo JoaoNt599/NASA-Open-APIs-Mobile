@@ -5,39 +5,42 @@
       <ion-icon name="logo"></ion-icon>
         NASA Open APIs
         <ion-icon name="logo"></ion-icon>
-      <ion-icon name="planet"></ion-icon>
+      <ion-icon name="telescope-outline"></ion-icon>
     </ion-title>
   </ion-toolbar>
   <ion-item>
-    <ion-icon name="logo-ionic"></ion-icon>
     <ion-icon name="logo-capacitor"></ion-icon>
-    <ion-icon name="logo-angular"></ion-icon>
-    <ion-icon name="logo-javascript"></ion-icon>
-    <ion-icon name="logo-nodejs"></ion-icon>
-    <ion-icon name="logo-npm"></ion-icon>
-    <ion-icon name="logo-android"></ion-icon>
+    <ion-icon name="logo-capacitor"></ion-icon>
+    <ion-icon name="logo-capacitor"></ion-icon>
+    <ion-icon name="logo-capacitor"></ion-icon>
+    <ion-icon name="logo-capacitor"></ion-icon>
+    <ion-icon name="logo-capacitor"></ion-icon>
+    <ion-icon name="logo-capacitor"></ion-icon>
   </ion-item>
 </ion-header>
 
 <ion-content class="ion-padding">
 
+  <!--APOD-->
   <ion-item>
     <ion-button name="reorder-three-outline" routerLink="/apod" color="secondary"> 
-      APOD: View Atronomy Picture of the Day 
+      APOD: View Atronomy Picture of...
     </ion-button>
 
-    <ion-button id="open-modal" expand="block">
+    <ion-button id="open-apod-modal" expand="block">
       <b>Info</b>
-      <ion-icon name="reorder-three-outline"></ion-icon>
+      <ion-icon name="information-circle-outline"></ion-icon>
     </ion-button>
 
-    <ion-modal #modal trigger="open-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+    <ion-icon name="analytics-outline"></ion-icon>
+
+    <ion-modal #modal trigger="open-apod-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
         <ion-header>
           <ion-toolbar>
             <ion-title>APOD: Astronomy Picture of the Day</ion-title>
             <ion-buttons slot="end">
-              <ion-button (click)="modal.dismiss()">Close</ion-button>
+              <ion-button (click)="dismissApodModal()">Close</ion-button>
             </ion-buttons>
           </ion-toolbar>
         </ion-header>
@@ -59,29 +62,227 @@
         </ion-content>
       </ng-template>
     </ion-modal>
-
   </ion-item>
+  <!--APOD-->
+
+  <!--NeoWs-->
+  <ion-item>
+    <ion-button name="reorder-three-outline" routerLink="/asteroids" color="secondary"> 
+      NeoWs: See Near-Earth Asteroid...
+    </ion-button>
+
+    <ion-button id="open-neows-modal" expand="block">
+      <b>Info</b>
+      <ion-icon name="information-circle-outline"></ion-icon>
+    </ion-button>
+
+    <ion-icon name="analytics-outline"></ion-icon>
+
+    <ion-modal #modal trigger="open-neows-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Asteroids: NeoWs</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="dismissNeowsModal()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-item>
+          APOD: Astronomy Picture of the Day
+        </ion-item>
+        <ion-content>
+          <ion-item>
+            <p>
+              NeoWs (Near Earth Object Web Service) is a RESTful web service for near earth Asteroid information. 
+              With NeoWs a user can: search for Asteroids based on their closest approach date to Earth, lookup a specific Asteroid with its NASA JPL small body id, as well as browse the overall data-set.
+              Data-set: All the data is from the NASA JPL Asteroid team (http://neo.jpl.nasa.gov/).
+              This API is maintained by SpaceRocks Team: David Greenfield, Arezu Sarvestani, Jason English and Peter Baunach.
+            </p>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </ion-item>
+  <!--NeoWs-->
+
+  <!--DONKI-->
+  <ion-item>
+    <ion-button name="reorder-three-outline" routerLink="/home" color="secondary"> 
+      DONKI: Space Weather Databas...
+    </ion-button>
+
+    <ion-button id="open-donki-modal" expand="block">
+      <b>Info</b>
+      <ion-icon name="information-circle-outline"></ion-icon>
+    </ion-button>
+
+    <ion-icon name="analytics-outline"></ion-icon>
+
+    <ion-modal #modal trigger="open-donki-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>DONKI: Space Weather Database Of Notifications, Knowledge, Information</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="dismissDonkiModal()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-item>
+          DONKI: Space Weather Database Of Notifications, Knowledge, Information
+        </ion-item>
+        <ion-content>
+          <ion-item>
+            <p>
+              The Space Weather Database Of Notifications, Knowledge, Information (DONKI) is a comprehensive on-line tool for space weather forecasters, scientists, and the general space science community. 
+              DONKI chronicles the daily interpretations of space weather observations, analysis, models, forecasts, and notifications provided by the Space Weather Research Center (SWRC), 
+              comprehensive knowledge-base search functionality to support anomaly resolution and space science research, intelligent linkages, relationships, cause-and-effects between space weather 
+              activities and comprehensive webservice API access to information stored in DONKI. 
+            </p>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </ion-item>
+  <!--DONKI-->
   
+  <!--EARTH-->
+  <ion-item>
+    <ion-button name="reorder-three-outline" routerLink="/home" color="secondary"> 
+      Earth: Unlock the significant publi...
+    </ion-button>
 
-  <ion-button expand="full" routerLink="/asteroids" color="secondary">
-    NeoWs: See Near-Earth Asteroids
-  </ion-button>
+    <ion-button id="open-earth-modal" expand="block">
+      <b>Info</b>
+      <ion-icon name="information-circle-outline"></ion-icon>
+    </ion-button>
 
-  <ion-button expand="full" routerLink="/home" color="secondary">
-    DONKI: Space Weather Database Of Notifications, Knowledge, Information
-  </ion-button>
+    <ion-icon name="analytics-outline"></ion-icon>
 
-  <ion-button expand="full" routerLink="/home" color="secondary">
-    Earth: Unlock the significant public investment in earth observation data
-  </ion-button>
+    <ion-modal #modal trigger="open-earth-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title> Earth: Unlock the significant public investment in earth observation data</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="dismissEarthModal()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-item>
+          Earth: Unlock the significant public investment in earth observation data
+        </ion-item>
+        <ion-content>
+          <ion-item>
+            <p>
+              Landsat imagery is provided to the public as a joint project between NASA and USGS.
+              A recent industry report on landsat satellite imagery data estimates that total annual value to the economy of $2.19 billion, far exceeding the multi-year total cost of building, launching, and managing Landsat satellites and sensors. 
+              The value is derived from consumers use of the data.
+              The objective of this endpoint is to give you an easy to use taste of what Landsat imagery data can provide. 
+              There are more complicated APIs available if you want to build models on top of satellite imagery, apply machine-learning, or minimize clouds in your image. 
+              NASA's Earth Science Devision has a variety of Earth imagery APIs for developers, which you can find out about in the Earthdata Developer Portal. 
+              Specifically, the GIBS (Global Imagery Browse Services) API may be of interest. The Google Earth Engine API is another powerful option. 
+              This API is powered by Google Earth Engine API, and currently only supports pan-sharpened Landsat 8 imagery. 
+            </p>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </ion-item>
+  <!--EARTH-->
+  
+  <!--EONET-->
+  <ion-item>
+    <ion-button name="reorder-three-outline" routerLink="/home" color="secondary"> 
+      EONET: The Earth Observatory Natura...
+    </ion-button>
 
-  <ion-button expand="full" routerLink="/home" color="secondary">
-    EONET: The Earth Observatory Natural Event Tracker 
-  </ion-button>
+    <ion-button id="open-eonet-modal" expand="block">
+      <b>Info</b>
+      <ion-icon name="information-circle-outline"></ion-icon>
+    </ion-button>
 
-  <ion-button expand="full" routerLink="/home" color="secondary">
-    EPIC: Earth Polychromatic Imaging Camera 
-  </ion-button>
+    <ion-icon name="analytics-outline"></ion-icon>
+
+    <ion-modal #modal trigger="open-eonet-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.90]">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title> EONET: The Earth Observatory Natural Event Tracker</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="dismissEonetModal()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-item>
+          EONET: The Earth Observatory Natural Event Tracker
+        </ion-item>
+        <ion-content>
+          <ion-item>
+            <p>
+              More and more NASA imagery is being made available via web services (WMS, WMTS, etc.) and a significant percentage of it is being produced and published in near real time (NRT=within a few hours after acquisition). 
+              This ability means that NASA imagery can be used more routinely to examine current natural events as they happen.
+              Using client applications, such as NASA EOSDIS’ Worldview, users can browse the entire globe daily and look for natural events as they occur. 
+              Storms are regularly spotted in the tropics, dust storms over deserts, forest fires in the summers. 
+              These events are occurring constantly and NASA NRT imagery can represent them all using a variety of different data parameters. However, the user’s experience is tailored, and therefore restricted, by the client application. 
+              What if there was an API that provided a curated list of natural events and provided a way to link those events to event-related NRT image layers? Enter EONET.
+              The Earth Observatory Natural Event Tracker (EONET) is a prototype web service with the goal of:
+              providing a curated source of continuously updated natural event metadata; providing a service that links those natural events to thematically-related web service-enabled image sources (e.g., via WMS, WMTS, etc.).
+              Please see our API documentation to learn more about how to use the EONET web services.
+              Development of EONET began in 2015 and has been supported by NASA’s Earth Observatory and Earth Science Data and Information System (ESDIS) Project. 
+            </p>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </ion-item>
+  <!--EONET-->
+
+  <!--APOD-->
+  <ion-item>
+    <ion-button name="reorder-three-outline" routerLink="/home" color="secondary"> 
+      EPIC: Earth Polychromatic Imaging... 
+    </ion-button>
+
+    <ion-button id="open-epic-modal" expand="block">
+      <b>Info</b>
+      <ion-icon name="information-circle-outline"></ion-icon>
+    </ion-button>
+
+    <ion-icon name="analytics-outline"></ion-icon>
+
+    <ion-modal #modal trigger="open-epic-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>EPIC: Earth Polychromatic Imaging Camera </ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="dismissEpicModal()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-item>
+          EPIC: Earth Polychromatic Imaging Camera 
+        </ion-item>
+        <ion-content>
+          <ion-item>
+            <p>
+              The EPIC API provides information on the daily imagery collected by DSCOVR's Earth Polychromatic Imaging Camera (EPIC) instrument. 
+              Uniquely positioned at the Earth-Sun Lagrange point, EPIC provides full disc imagery of the Earth and captures unique perspectives of certain astronomical events such as lunar transits using a 2048x2048 pixel CCD (Charge Coupled Device) 
+              detector coupled to a 30-cm aperture Cassegrain telescope.
+              Image metadata and key information are provided by the JSON API and can be requested by date and for the most recent available date. 
+              A listing of all available dates can also be retrieved via the API for more granular control.
+              Development of the EPIC API began in 2015, and is supported by the web development team for the Laboratory for Atmospheres in the Earth Sciences Division of the Goddard Space Flight Center. 
+              More information regarding the API and retrieval of the imagery for download can be found on the EPIC website. 
+            </p>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </ion-item>
+  <!--APOD-->
+
 
   <ion-button expand="full" routerLink="/home" color="secondary">
     Programmatic access to NASA's Exoplanet Archive databse (Exoplanet)
@@ -128,3 +329,14 @@
   </ion-button>
 </ion-content>
 
+<ion-toolbar>
+  <ion-item>
+    <ion-icon name="logo-capacitor"></ion-icon>
+    <ion-icon name="logo-capacitor"></ion-icon>
+    <ion-icon name="logo-capacitor"></ion-icon>
+    <ion-icon name="logo-capacitor"></ion-icon>
+    <ion-icon name="logo-capacitor"></ion-icon>
+    <ion-icon name="logo-capacitor"></ion-icon>
+    <ion-icon name="logo-capacitor"></ion-icon>
+  </ion-item>
+</ion-toolbar>
