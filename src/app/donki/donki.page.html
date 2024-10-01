@@ -14,7 +14,7 @@
     <ion-item *ngFor="let event of donkiData">
       <ion-label>
         <h2>{{ event.beginTime | date }}</h2>
-        <p>Typo: {{ event.classType }}</p>
+        <p>Type: {{ event.classType }}</p>
         <p *ngIf="event.magnitude">Magnitude: {{ event.magnitude }}</p>
         <p *ngIf="!event.magnitude">Magnitude not available</p>
       </ion-label>

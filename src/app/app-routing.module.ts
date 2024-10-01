@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'donki',
     loadChildren: () => import('./donki/donki.module').then( m => m.DonkiPageModule)
   },
+  {
+    path: 'earth',
+    loadChildren: () => import('./earth/earth.module').then( m => m.EarthPageModule)
+  },
 ];
 
 @NgModule({
