@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-button  name="reorder-three-outline" routerLink="/home" color="secondary">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+      <ion-title>NASA Exoplanets</ion-title>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let planet of exoplanets">
+      <ion-label>
+        <h2>{{ planet.pl_name }}</h2>
+        <p>Discovered in:{{ planet.disc_year }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item *ngIf="errorMessage">{{ errorMessage }}</ion-item>
+</ion-content>

@@ -236,7 +236,7 @@
   </ion-item>
   <!--EONET-->
 
-  <!--APOD-->
+  <!--EPIC-->
   <ion-item>
     <ion-button name="reorder-three-outline" routerLink="/epic" color="secondary"> 
       EPIC: Earth Polychromatic Imaging... 
@@ -278,16 +278,96 @@
       </ng-template>
     </ion-modal>
   </ion-item>
-  <!--APOD-->
+  <!--EPIC-->
 
 
-  <ion-button expand="full" routerLink="/home" color="secondary">
-    Programmatic access to NASA's Exoplanet Archive databse (Exoplanet)
-  </ion-button>
+  <!--EXOPLANET-->
+  <ion-item>
+    <ion-button name="reorder-three-outline" routerLink="/exoplanet" color="secondary"> 
+      Exoplanet: Programmatic access to...
+    </ion-button>
 
-  <ion-button expand="full" routerLink="/home" color="secondary">
-    Open Science Data Repository
-  </ion-button>
+    <ion-button id="open-exoplanet-modal" expand="block">
+      <b>Info</b>
+      <ion-icon name="information-circle-outline"></ion-icon>
+    </ion-button>
+
+    <ion-icon name="analytics-outline"></ion-icon>
+
+    <ion-modal #modal trigger="open-exoplanet-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Programmatic access to NASA's Exoplanet Archive databse</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="dismissExoplanetModal()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-item>
+          Programmatic access to NASA's Exoplanet Archive databse
+        </ion-item>
+        <ion-content>
+          <ion-item>
+            <p>
+              The Exoplanet Archive API allows programatic access to NASA's Exoplanet Archive database. 
+              This API contains a ton of options so to get started please visit this page for introductory materials. 
+              To see what data is available in this API visit here and also be sure to check out best-practices and troubleshooting in case you get stuck. 
+              Happy planet hunting!  
+            </p>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </ion-item>
+  <!--EXOPLANET-->
+
+  <!--OSDR-->
+  <ion-item>
+    <ion-button name="reorder-three-outline" routerLink="/home" color="secondary"> 
+      Open Science Data Repository P...
+    </ion-button>
+
+    <ion-button id="open-osdr-modal" expand="block">
+      <b>Info</b>
+      <ion-icon name="information-circle-outline"></ion-icon>
+    </ion-button>
+
+    <ion-icon name="analytics-outline"></ion-icon>
+
+    <ion-modal #modal trigger="open-osdr-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Open Science Data Repository Public API</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="dismissOsdrModal()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-item>
+          Open Science Data Repository Public API
+        </ion-item>
+        <ion-content>
+          <ion-item>
+            <p>
+              NASA OSDR provides a RESTful Application Programming Interface (API) to its full-text search, data file retrieval, and metadata retrieval capabilities. 
+              The API provides a choice of standard web output formats, either JavaScript Object Notation (JSON) or Hyper Text Markup Language (HTML), of query results. 
+              The Data File API returns metadata on data files associated with dataset(s), including the location of these files for download via https. 
+              The Metadata API returns entire sets of metadata for input study dataset accession numbers. 
+              The Search API can be used to search dataset metadata by keywords and/or metadata. 
+              It can also be used to provide search of three other omics databases: the National Institutes of Health (NIH) / National Center for Biotechnology Information's (NCBI) 
+              Gene Expression Omnibus (GEO); the European Bioinformatics Institute's (EBI) Proteomics Identification (PRIDE); the Argonne National Laboratory's (ANL) Metagenomics Rapid Annotations using Subsystems Technology (MG-RAST).
+              In addition to study datasets, NASA OSDR also hosts metadata for 7 other data types: experiments, payloads, subjects, biospecimens, missions, vehicles, and hardware. 
+              The API for these data types is listed separately and uniform throughout, to make for easy metadata exploration.  
+            </p>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </ion-item>
+  <!--OSDR-->
+  
 
   <ion-button expand="full" routerLink="/home" color="secondary">
     Insight: Mars Weather Service API

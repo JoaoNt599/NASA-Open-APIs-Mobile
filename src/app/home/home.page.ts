@@ -13,6 +13,8 @@ export class HomePage {
   @ViewChild('earthModal') earthModal!: IonModal;
   @ViewChild('eonetModal') eonethModal!: IonModal;
   @ViewChild('epictModal') epicModal!: IonModal;
+  @ViewChild('exoplanetModal') exoplanetModal!: IonModal;
+  @ViewChild('osdrModal') osdrModal!: IonModal;
   presentingElement: Element | null = null;
 
   constructor() {}
@@ -43,5 +45,13 @@ export class HomePage {
 
   dismissEpicModal() {
     this.epicModal.dismiss();
+  }
+
+  dismissExoplanetModal() {
+    this.exoplanetModal.dismiss();
+  }
+
+  dismissOsdrModal() {
+    this.osdrModal.dismiss();
   }
 }

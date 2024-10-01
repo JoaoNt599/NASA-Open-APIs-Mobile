@@ -35,6 +35,12 @@ const routes: Routes = [
     path: 'epic',
     loadChildren: () => import('./epic/epic.module').then( m => m.EpicPageModule)
   },
+  {
+    path: 'exoplanet',
+    loadChildren: () => import('./exoplanet/exoplanet.module').then( m => m.ExoplanetPageModule)
+  },
+
+  
 ];
 
 @NgModule({
