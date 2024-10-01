@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-button  name="reorder-three-outline" routerLink="/home" color="secondary">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+      <ion-title>Solar Events (Donki)</ion-title>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="donkiData.length > 0">
+  <ion-list>
+    <ion-item *ngFor="let event of donkiData">
+      <ion-label>
+        <h2>{{ event.beginTime | date }}</h2>
+        <p>Typo: {{ event.classType }}</p>
+        <p *ngIf="event.magnitude">Magnitude: {{ event.magnitude }}</p>
+        <p *ngIf="!event.magnitude">Magnitude not available</p>
+      </ion-label>
+      <!-- <pre>{{ event | json }}</pre> -->
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-content *ngIf="donkiData.length === 0">
+  <p>No solar events found on the selected dates.</p>
+</ion-content>

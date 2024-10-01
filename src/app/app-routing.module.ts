@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'asteroids',
     loadChildren: () => import('./asteroids/asteroids.module').then( m => m.AsteroidsPageModule)
   },
+  {
+    path: 'donki',
+    loadChildren: () => import('./donki/donki.module').then( m => m.DonkiPageModule)
+  },
 ];
 
 @NgModule({
