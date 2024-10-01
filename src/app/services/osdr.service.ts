@@ -5,14 +5,13 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-
-export class EonetService {
+export class OsdrService {
   private apiKey: string = 'bK4NeFCINWIY0gpdGfYLRxyHm7Mm2xxuJzBzaNPZ';
-  private apiUrl: string = `https://eonet.sci.gsfc.nasa.gov/?api_key=${this.apiKey}`;  // /api/v2.1/events
+  private apiUrl: string = `https://data.open.science/?api_key=${this.apiKey}`;
 
   constructor(private http: HttpClient) {}
 
-  getEonetEvents(): Observable<any> {
+  getOsdrData(): Observable<any> {
     return this.http.get(this.apiUrl); 
   }
 }

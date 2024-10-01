@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-button  name="reorder-three-outline" routerLink="/home" color="secondary">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+      <ion-title>Open Science Data Repository</ion-title>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of osdrData">
+      <ion-label>
+        <h2>{{ item.title }}</h2> 
+        <p>{{ item.description }}</p> 
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item *ngIf="errorMessage">{{ errorMessage }}</ion-item>
+</ion-content>

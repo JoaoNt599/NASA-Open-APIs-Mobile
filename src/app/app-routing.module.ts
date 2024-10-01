@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'exoplanet',
     loadChildren: () => import('./exoplanet/exoplanet.module').then( m => m.ExoplanetPageModule)
   },
+  {
+    path: 'osdr',
+    loadChildren: () => import('./osdr/osdr.module').then( m => m.OsdrPageModule)
+  },
 
   
 ];
