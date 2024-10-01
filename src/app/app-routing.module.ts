@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'earth',
     loadChildren: () => import('./earth/earth.module').then( m => m.EarthPageModule)
   },
+  {
+    path: 'eonet',
+    loadChildren: () => import('./eonet/eonet.module').then( m => m.EonetPageModule)
+  },
 ];
 
 @NgModule({
