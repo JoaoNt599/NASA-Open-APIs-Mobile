@@ -1,13 +1,12 @@
 {
   "name": "nasaApp",
   "integrations": {
-    "cordova": {}
-  },
+    "capacitor": {}},
   "type": "angular",
   "proxies": [
     {
       "path": "/api",
-      "proxyUrl": "https://eonet.sci.gsfc.nasa.gov/api/v2.1"
+      "proxyUrl": "https://api.nasa.gov"
     }
   ]
 }

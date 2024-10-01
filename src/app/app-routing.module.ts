@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'eonet',
     loadChildren: () => import('./eonet/eonet.module').then( m => m.EonetPageModule)
   },
+  {
+    path: 'epic',
+    loadChildren: () => import('./epic/epic.module').then( m => m.EpicPageModule)
+  },
 ];
 
 @NgModule({
