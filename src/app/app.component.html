@@ -11,10 +11,18 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <ion-item routerLink="/apod" (click)="closeMenu()">APOD</ion-item>
+      <ion-item routerLink="/home">
+       <b>Profile</b> 
+       <ion-icon slot="end" name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <b>Exit</b>
+        <ion-icon name="exit-outline" slot="end"></ion-icon>
+      </ion-item>
+      <!-- <ion-item routerLink="/apod" (click)="closeMenu()">APOD</ion-item>
       <ion-item routerLink="/asteroids" (click)="closeMenu()">Asteroids</ion-item>
       <ion-item routerLink="/donki" (click)="closeMenu()">DONKI</ion-item>
-      <ion-item routerLink="/earth" (click)="closeMenu()">Earth</ion-item>
+      <ion-item routerLink="/earth" (click)="closeMenu()">Earth</ion-item> -->
     </ion-list>
   </ion-content>
 </ion-menu>
