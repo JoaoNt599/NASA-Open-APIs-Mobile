@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'mars-weather',
     loadChildren: () => import('./mars-weather/mars-weather.module').then( m => m.MarsWeatherPageModule)
   },
+  {
+    path: 'mars-rover-photos',
+    loadChildren: () => import('./mars-rover-photos/mars-rover-photos.module').then( m => m.MarsRoverPhotosPageModule)
+  },
 
   
 ];
