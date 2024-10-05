@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'osdr',
     loadChildren: () => import('./osdr/osdr.module').then( m => m.OsdrPageModule)
   },
+  {
+    path: 'mars-weather',
+    loadChildren: () => import('./mars-weather/mars-weather.module').then( m => m.MarsWeatherPageModule)
+  },
 
   
 ];
