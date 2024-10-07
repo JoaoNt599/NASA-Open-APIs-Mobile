@@ -18,26 +18,23 @@
       {{ i + 1 }}
     </ion-button>
   </div>
-  <ion-list>
-    <ion-item *ngFor="let photo of photos">
-      <ion-label>
-        <h2>{{ photo.camera.full_name }}</h2>
-        <p>Rover: {{ photo.rover.name }}</p>
-        <p>Photo date: {{ photo.earth_date }}</p>
-        <img [src]="photo.img_src" alt="Rover photo">
-      </ion-label>
-    </ion-item>
-  </ion-list>
 
-  <!-- Pagination buttons -->
-  <div class="pagination">
-    <ion-button *ngFor="let page of [].constructor(totalPages); let i = index" 
-                (click)="changePage(i + 1)" 
-                [color]="(i + 1) === currentPage ? 'primary' : 'light'">
-      {{ i + 1 }}
-    </ion-button>
-  </div>
+  <ion-content *ngIf="photos.length > 0">
+    <ion-card *ngFor="let photo of photos">
+      <ion-img [src]="photo.img_src" *ngIf="photo.img_src"></ion-img>
+      <ion-card-header>
+        <ion-card-title>{{ photo.camera.full_name }}</ion-card-title>
+        <p>Rover: {{ photo.rover.name }} - {{ photo.earth_date }}</p>
+      </ion-card-header>
+    </ion-card>
+  </ion-content>
+  
+  <ng-template *ngIf="photos.length == 0">
+    <p>No photos available</p>
+  </ng-template>
+
 </ion-content>
+
 
 <ion-footer>
   <!-- Ion-tab-button snippet -->

@@ -51,6 +51,10 @@ const routes: Routes = [
     path: 'mars-rover-photos',
     loadChildren: () => import('./mars-rover-photos/mars-rover-photos.module').then( m => m.MarsRoverPhotosPageModule)
   },
+  {
+    path: 'live-stream',
+    loadChildren: () => import('./live-stream/live-stream.module').then( m => m.LiveStreamPageModule)
+  },
 
   
 ];
