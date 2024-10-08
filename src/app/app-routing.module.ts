@@ -55,6 +55,10 @@ const routes: Routes = [
     path: 'live-stream',
     loadChildren: () => import('./live-stream/live-stream.module').then( m => m.LiveStreamPageModule)
   },
+  {
+    path: 'nasa-image',
+    loadChildren: () => import('./nasa-image/nasa-image.module').then( m => m.NasaImagePageModule)
+  },
 
   
 ];

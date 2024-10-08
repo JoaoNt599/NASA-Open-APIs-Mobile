@@ -4,15 +4,34 @@
       <ion-button  name="reorder-three-outline" routerLink="/home" color="secondary">
         <ion-icon name="chevron-back"></ion-icon>
       </ion-button>
-      <ion-title>Mars Weather</ion-title>
+      <ion-title>Mars Weather</ion-title>   
     </ion-item>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-button (click)="generatePDF()" name="reorder-three-outline" color="secondary" slot="start">
+      Generate PDF <ion-icon name="pie-chart-outline" slot="end"></ion-icon>
+    </ion-button>
+    <ion-button (click)="generateCSV()" color="secondary"  name="reorder-three-outline" slot="end">
+      Generate CSV<ion-icon name="pie-chart-outline" slot="end"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  
+
   <div *ngIf="marsWeather">
+    
     <h2>Latest atmospheric conditions on Mars</h2>
     <ul>
+      <!-- <li *ngFor="let sol of marsWeather.sol_keys">
+        <h3>Sun {{ sol }}</h3>
+        <p>Maximum temperature: {{ marsWeather[sol].AT?.mx }} °C</p>
+        <p>Minimum temperature: {{ marsWeather[sol].AT?.mn }} °C</p>
+        <p>Atmospheric pressure: {{ marsWeather[sol].PRE?.av }} Pa</p>
+        <p>Wind speed: {{ marsWeather[sol].HWS?.av }} m/s</p>
+      </li> -->
       <li *ngFor="let sol of marsWeather.sol_keys">
         <h3>Sun {{ sol }}</h3>
         <p>Maximum temperature: {{ marsWeather[sol].AT?.mx }} °C</p>
