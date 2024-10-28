@@ -8,12 +8,16 @@
     </ion-item>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-button (click)="generatePDF()" name="reorder-three-outline" color="secondary" slot="start">
-      Generate PDF <ion-icon name="pie-chart-outline" slot="end"></ion-icon>
-    </ion-button>
-    <ion-button (click)="generateCSV()" color="secondary"  name="reorder-three-outline" slot="end">
-      Generate CSV<ion-icon name="pie-chart-outline" slot="end"></ion-icon>
-    </ion-button>
+    <ion-buttons>
+      <ion-button (click)="generatePDF()" name="reorder-three-outline" color="secondary" slot="end">
+        Generate PDF <ion-icon name="pie-chart-outline" slot="end"></ion-icon>
+      </ion-button>
+   
+      <ion-button (click)="generateCSV()" color="secondary"  name="reorder-three-outline" slot="end">
+        Generate CSV<ion-icon name="pie-chart-outline" slot="end"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
@@ -49,8 +53,8 @@
   <!-- Ion-tab-button snippet -->
   <ion-tab-bar>
     <ion-tab-button>
-      <ion-icon name="library-outline"></ion-icon>
-      <span class="button-is-selected">Curiosities</span>
+      <ion-icon name="radio-outline" routerLink="/live-stream"></ion-icon>
+      <span class="button-is-selected">Live Stream</span>
     </ion-tab-button>
     <ion-tab-button>
       <ion-icon name="newspaper-outline"></ion-icon>

@@ -17,19 +17,24 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+  <div class="container">
 
   <!--APOD-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/apod" color="secondary"> 
+    <ion-buttons>
+    <ion-button name="reorder-three-outline" routerLink="/apod"  class="text-label"> 
       APOD: View Atronomy Picture of...
     </ion-button>
+    </ion-buttons>
 
+    <ion-buttons>
     <ion-button id="open-apod-modal" expand="block">
-      <b>Info</b>
+      <b class="text-info">Info</b>
       <ion-icon name="information-circle-outline"></ion-icon>
     </ion-button>
+    </ion-buttons>
 
-    <ion-icon name="analytics-outline"></ion-icon>
+    <!-- <ion-icon name="analytics-outline"></ion-icon> -->
 
     <ion-modal #modal trigger="open-apod-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -64,16 +69,21 @@
 
   <!--NeoWs-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/asteroids" color="secondary"> 
+    <ion-buttons>
+    <ion-button name="reorder-three-outline" routerLink="/asteroids" class="text-label"> 
       NeoWs: See Near-Earth Asteroid...
     </ion-button>
+    </ion-buttons>
 
+    <ion-buttons>
     <ion-button id="open-neows-modal" expand="block">
-      <b>Info</b>
+      <b class="text-info">Info</b>
       <ion-icon name="information-circle-outline"></ion-icon>
     </ion-button>
+  </ion-buttons>
+    
 
-    <ion-icon name="analytics-outline"></ion-icon>
+    <!-- <ion-icon name="analytics-outline"></ion-icon> -->
 
     <ion-modal #modal trigger="open-neows-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -105,16 +115,20 @@
 
   <!--DONKI-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/donki" color="secondary"> 
+    <ion-buttons>
+    <ion-button name="reorder-three-outline" routerLink="/donki" class="text-label"> 
       DONKI: Space Weather Databas...
     </ion-button>
+  </ion-buttons>
 
+    <ion-buttons>
     <ion-button id="open-donki-modal" expand="block">
-      <b>Info</b>
+      <b class="text-info">Info</b>
       <ion-icon name="information-circle-outline"></ion-icon>
     </ion-button>
+    </ion-buttons>
 
-    <ion-icon name="analytics-outline"></ion-icon>
+    <!-- <ion-ic name="analytics-outline">on></ion-ic -->
 
     <ion-modal #modal trigger="open-donki-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -146,16 +160,21 @@
   
   <!--EARTH-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/earth" color="secondary"> 
-      Earth: Unlock the significant publi...
-    </ion-button>
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/earth" class="text-label"> 
+        Earth: Unlock the significant publi...
+      </ion-button>
+    </ion-buttons>
+   
+    <ion-buttons>
+      <ion-button id="open-earth-modal" expand="block">
+        <b class="text-info">Info</b>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
 
-    <ion-button id="open-earth-modal" expand="block">
-      <b>Info</b>
-      <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
-
-    <ion-icon name="analytics-outline"></ion-icon>
+    <!-- <ion-icon name="analytics-outline"></ion-icon> -->
 
     <ion-modal #modal trigger="open-earth-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -191,17 +210,20 @@
   
   <!--EONET-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/eonet" color="secondary"> 
-      EONET: The Earth Observatory Natura...
-    </ion-button>
 
-    <ion-button id="open-eonet-modal" expand="block">
-      <b>Info</b>
-      <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
-
-    <ion-icon name="analytics-outline"></ion-icon>
-
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/eonet" class="text-label"> 
+        EONET: The Earth Observatory Natura...
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-buttons>
+      <ion-button id="open-eonet-modal" expand="block">
+        <b class="text-info">Info</b>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+ 
     <ion-modal #modal trigger="open-eonet-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.90]">
       <ng-template>
         <ion-header>
@@ -238,16 +260,18 @@
 
   <!--EPIC-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/epic" color="secondary"> 
-      EPIC: Earth Polychromatic Imaging... 
-    </ion-button>
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/epic"> 
+        EPIC: Earth Polychromatic Imaging... 
+      </ion-button>
+    </ion-buttons>
 
-    <ion-button id="open-epic-modal" expand="block">
-      <b>Info</b>
-      <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
-
-    <ion-icon name="analytics-outline"></ion-icon>
+    <ion-buttons>
+      <ion-button id="open-epic-modal" expand="block">
+        <b>Info</b>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
 
     <ion-modal #modal trigger="open-epic-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -283,16 +307,18 @@
 
   <!--EXOPLANET-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/exoplanet" color="secondary"> 
-      Exoplanet: Programmatic access to...
-    </ion-button>
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/exoplanet"> 
+        Exoplanet: Programmatic access to...
+      </ion-button>
+    </ion-buttons>
 
-    <ion-button id="open-exoplanet-modal" expand="block">
-      <b>Info</b>
-      <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
-
-    <ion-icon name="analytics-outline"></ion-icon>
+    <ion-buttons>
+      <ion-button id="open-exoplanet-modal" expand="block">
+        <b>Info</b>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
 
     <ion-modal #modal trigger="open-exoplanet-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -324,16 +350,18 @@
 
   <!--OSDR-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/osdr" color="secondary"> 
-      Open Science Data Repository P...
-    </ion-button>
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/osdr"> 
+        Open Science Data Repository Public...
+      </ion-button>
+    </ion-buttons>
 
-    <ion-button id="open-osdr-modal" expand="block">
-      <b>Info</b>
-      <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
-
-    <ion-icon name="analytics-outline"></ion-icon>
+    <ion-buttons>
+      <ion-button id="open-osdr-modal" expand="block">
+        <b>Info</b>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
 
     <ion-modal #modal trigger="open-osdr-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -370,16 +398,18 @@
 
   <!--INSIGHT-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/mars-weather" color="secondary"> 
-      InSight: Mars Weather Service API
-    </ion-button>
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/mars-weather"> 
+        InSight: Mars Weather Service API
+      </ion-button>
+    </ion-buttons>
 
-    <ion-button id="open-insight-modal" expand="block">
-      <b>Info</b>
-      <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
-
-    <ion-icon name="analytics-outline"></ion-icon>
+    <ion-buttons>
+      <ion-button id="open-insight-modal" expand="block">
+        <b>Info</b>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
 
     <ion-modal #modal trigger="open-insight-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -415,16 +445,18 @@
 
   <!--MRP-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/mars-rover-photos" color="secondary"> 
-      Mars Rover Photos: Image data...
-    </ion-button>
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/mars-rover-photos"> 
+        Mars Rover Photos: Image data...
+      </ion-button>
+    </ion-buttons>
 
-    <ion-button id="open-mrp-modal" expand="block">
-      <b>Info</b>
-      <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
-
-    <ion-icon name="analytics-outline"></ion-icon>
+    <ion-buttons>
+      <ion-button id="open-mrp-modal" expand="block">
+        <b>Info</b>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
 
     <ion-modal #modal trigger="open-mrp-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -460,17 +492,20 @@
   
   <!--NIVL-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/nasa-image" color="secondary"> 
-      NASA Image and Video Library API...
-    </ion-button>
+    
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/nasa-image"> 
+        NASA Image and Video Library API...
+      </ion-button>
+    </ion-buttons>
 
-    <ion-button id="open-nivl-modal" expand="block">
-      <b>Info</b>
-      <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
-
-    <ion-icon name="analytics-outline"></ion-icon>
-
+    <ion-buttons>
+      <ion-button id="open-nivl-modal" expand="block">
+        <b>Info</b>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+ 
     <ion-modal #modal trigger="open-nivl-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
         <ion-header>
@@ -502,16 +537,19 @@
 
   <!--TT-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/home" color="secondary"> 
-      TechTransfer NASA's Technology...
-    </ion-button>
 
-    <ion-button id="open-tt-modal" expand="block">
-      <b>Info</b>
-      <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/home"> 
+        TechTransfer NASA's Technology...
+      </ion-button>
+    </ion-buttons>
 
-    <ion-icon name="analytics-outline"></ion-icon>
+    <ion-buttons>
+      <ion-button id="open-tt-modal" expand="block">
+        <b>Info</b>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
 
     <ion-modal #modal trigger="open-tt-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -544,17 +582,20 @@
 
   <!--SSC-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/home" color="secondary"> 
-      Satellite Situation Center: System to...
-    </ion-button>
 
-    <ion-button id="open-ssc-modal" expand="block">
-      <b>Info</b>
-      <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
-
-    <ion-icon name="analytics-outline"></ion-icon>
-
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/home" class="text-label"> 
+        Satellite Situation Center: System to...
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-buttons>
+      <ion-button id="open-ssc-modal" expand="block">
+        <b class="text-in">Info</b>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
     <ion-modal #modal trigger="open-ssc-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
         <ion-header>
@@ -585,16 +626,19 @@
 
   <!--SSD/CNEOS-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/home" color="secondary"> 
-      Center for Near-Earth Object Studies...
-    </ion-button>
 
-    <ion-button id="open-ssd-modal" expand="block">
-      <b>Info</b>
-      <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
-
-    <ion-icon name="analytics-outline"></ion-icon>
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/home" class="text-label"> 
+        Center for Near-Earth Object Studies...
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-buttons>
+      <ion-button id="open-ssd-modal" expand="block">
+        <b class="text-info">Info</b>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
 
     <ion-modal #modal trigger="open-ssd-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -626,16 +670,19 @@
 
   <!--Techport-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/home" color="secondary"> 
-      TechPort is NASA’s technology's ...
-    </ion-button>
 
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/home" class="text-label"> 
+        TechPort is NASA’s technology's ...
+      </ion-button>
+    </ion-buttons>
+    
+  <ion-buttons>
     <ion-button id="open-techport-modal" expand="block">
-      <b>Info</b>
+      <b class="text-info">Info</b>
       <ion-icon name="information-circle-outline"></ion-icon>
     </ion-button>
-
-    <ion-icon name="analytics-outline"></ion-icon>
+  </ion-buttons>
 
     <ion-modal #modal trigger="open-techport-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -668,16 +715,19 @@
 
   <!--Tle api-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/home" color="secondary"> 
-      TLE API - Two Line Element set recod...
-    </ion-button>
 
-    <ion-button id="open-tleapi-modal" expand="block">
-      <b>Info</b>
-      <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
-
-    <ion-icon name="analytics-outline"></ion-icon>
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/home" class="text-label"> 
+        TLE API - Two Line Element set record...
+      </ion-button>
+    </ion-buttons>
+   
+    <ion-buttons>
+      <ion-button id="open-tleapi-modal" expand="block">
+        <b class="text-info">Info</b>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
 
     <ion-modal #modal trigger="open-tleapi-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -709,16 +759,18 @@
 
   <!--WMTS-->
   <ion-item>
-    <ion-button name="reorder-three-outline" routerLink="/home" color="secondary"> 
-      Vesta/Moon/Mars Trek WMTS - A Web Map...
-    </ion-button>
+    <ion-buttons>
+      <ion-button name="reorder-three-outline" routerLink="/home" class="text-label"> 
+        Vesta/Moon/Mars Trek WMTS - A Web Map...
+      </ion-button>
+    </ion-buttons>
 
-    <ion-button id="open-wmts-modal" expand="block">
-      <b>Info</b>
-      <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
-
-    <ion-icon name="analytics-outline"></ion-icon>
+    <ion-buttons>
+      <ion-button id="open-wmts-modal" expand="block">
+        <b class="text-info">Info</b>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
 
     <ion-modal #modal trigger="open-wmts-modal" [presentingElement]="presentingElement" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
       <ng-template>
@@ -768,6 +820,7 @@
     </ion-modal>
   </ion-item>
   <!--WMTS-->
+  </div>
 </ion-content>
 
 <ion-footer>
@@ -782,7 +835,7 @@
       <span>Newsletter</span>
     </ion-tab-button>
     <ion-tab-button>
-      <ion-icon name="server-outline"></ion-icon>
+      <ion-icon name="server-outline" routerLink="/home"></ion-icon>
       <span>APIs</span>
     </ion-tab-button>
     </ion-tab-bar>
