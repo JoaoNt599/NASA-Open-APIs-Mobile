@@ -59,6 +59,10 @@ const routes: Routes = [
     path: 'nasa-image',
     loadChildren: () => import('./nasa-image/nasa-image.module').then( m => m.NasaImagePageModule)
   },
+  {
+    path: 'summary',
+    loadChildren: () => import('./summary/summary.module').then( m => m.SummaryPageModule)
+  },
 
   
 ];
